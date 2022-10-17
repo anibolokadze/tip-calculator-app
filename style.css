@@ -7,7 +7,7 @@
 :root{
     --strong-cyan:hsl(172, 67%, 45%);
     --very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
     --grayish-cyan: hsl(184, 14%, 56%);
     --light-grayish-cyan: hsl(185, 41%, 84%);
     --very-light-grayish-cyan: hsl(189, 41%, 97%);
@@ -17,14 +17,55 @@ body{
     background: var(--light-grayish-cyan);
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
-}
+    font-weight: 700;
+    color: var(--dark-grayish-cyan);
+} 
 /* general font sizes */
 h2,h3{
     font-size: 1rem;
 }
-span, input{
+h1, span, input{
     font-size: 2rem;
 }
 button{
     font-size: 1.25rem;
 }
+/* main section */
+.title{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    height: 49.313rem;
+    border-radius: 25px 25px 0px 0px;
+    background: var(--white);
+    padding: 1.334em;
+}
+input{
+    width: 100%;
+}
+
+  
+.bill-input input{
+    background-color: var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    background-image: url(/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left 10px top 19px;
+    padding: 10px;
+    text-align: right;
+    border: none;
+  }
+.people-input input{
+    background-color: var(--very-light-grayish-cyan);
+    border-radius: 5px;
+    background-image: url(/images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: left 10px top 19px;
+    padding: 10px;
+    text-align: right;
+    border: none;
+  }
+  
+ 

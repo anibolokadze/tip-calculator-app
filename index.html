@@ -9,48 +9,52 @@
     <title>Tip Calculator App</title>
 </head>
 <body>
-    <h1>SPLIT <br> TTER</h1>
-    <div class="container">
-        <div class="bill-container">
-            <h2>Bill</h2>
-            <div class="bill-input">
-                <img src="images/icon-dollar.svg" alt="dollar">
-                <input type="number" placeholder="0"></input>
+    <main>
+        <div class="title">
+            <h1>SPLIT <br> TTER</h1>
+        </div>
+        <div class="container">
+            <div class="bill-container">
+                <h2>Bill</h2>
+                <div class="bill-input">
+                    <input type="number" placeholder="0" />
+                </div>
+            </div>
+    
+            <div class="tips">
+                <h2>Select Tip %</h2>
+                <div class="tips-container">
+                    <button class="btn" value="5">5%</button>
+                    <button class="btn" value="10">10%</button>
+                    <button class="btn" value="15">15%</button>
+                    <button class="btn" value="25">25%</button>
+                    <button class="btn" value="50">50%</button>
+                    <input type="number" class="btn-six" placeholder="Custom" />
+                </div>
+            </div>
+    
+            <div class="people">
+                <h2>Number of People</h2>
+                <div class="people-input">
+                    <input type="number" placeholder="0" />
+                </div>
+            </div>
+    
+            <div class="result-container">
+                <div class="tip-amount">
+                    <h3>Tip Amount <br> / person </h3>
+                    <span>$0.00</span>
+                </div>
+                <div class="total">
+                    <h3>Total <br> / person </h3>
+                    <span>$0.00</span>
+                </div>  
+                <button>RESET</button>
             </div>
         </div>
-
-        <div class="tips">
-            <h2>Select Tip %</h2>
-            <div class="tips-container">
-                <div class="tip-5%">5%</div>
-                <div class="tip-10%">10%</div>
-                <div class="tip-15%">15%</div>
-                <div class="tip-25%">25%</div>
-                <div class="tip-50%">50%</div>
-                <div class="tip-custom">Custom</div>
-            </div>
-        </div>
-
-        <div class="people">
-            <h2>Number of People</h2>
-            <div class="people-input">
-                <img src="images/icon-person.svg" alt="person">
-                <input type="number" placeholder="0"></input>
-            </div>
-        </div>
-
-        <div class="result-container">
-            <div class="tip-amount">
-                <h3>Tip Amount <br> / person </h3>
-                <span>$0.00</span>
-            </div>
-            <div class="total">
-                <h3>Total <br> / person </h3>
-                <span>$0.00</span>
-            </div>  
-            <button>RESET</button>
-        </div>
-    </div>
+    </main>
+    
     <script src="index.js"></script>
 </body>
 </html>
+
