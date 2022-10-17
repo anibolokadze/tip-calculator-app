@@ -14,42 +14,53 @@
             <h1>SPLIT <br> TTER</h1>
         </div>
         <div class="container">
-            <div class="bill-container">
-                <h2>Bill</h2>
-                <div class="bill-input">
-                    <input type="number" placeholder="0" />
+            <div class="left-side">
+                <div class="bill-container">
+                    <h2>Bill</h2>
+                    <div class="bill-input">
+                        <input type="number" placeholder="0" />
+                    </div>
                 </div>
-            </div>
-    
-            <div class="tips">
-                <h2>Select Tip %</h2>
+        
                 <div class="tips-container">
-                    <button class="btn" value="5">5%</button>
-                    <button class="btn" value="10">10%</button>
-                    <button class="btn" value="15">15%</button>
-                    <button class="btn" value="25">25%</button>
-                    <button class="btn" value="50">50%</button>
-                    <input type="number" class="btn-six" placeholder="Custom" />
+                    <h2>Select Tip %</h2>
+                    <div class="tips-wrapper">
+                        <button class="btn" value="5">5%</button>
+                        <button class="btn" value="10">10%</button>
+                        <button class="btn" value="15">15%</button>
+                        <button class="btn" value="25">25%</button>
+                        <button class="btn" value="50">50%</button>
+                        <input type="number" class="btn-custom" placeholder="Custom" />
+                    </div>
+                </div>
+        
+                <div class="people">
+                    <h2>Number of People</h2>
+                    <div class="people-input">
+                        <input type="number" placeholder="0" />
+                    </div>
                 </div>
             </div>
     
-            <div class="people">
-                <h2>Number of People</h2>
-                <div class="people-input">
-                    <input type="number" placeholder="0" />
+            <div class="right-side">
+                <div class="result-container">
+                    <div class="tip-amount">
+                       <div class="price">
+                        <h3>Tip Amount</h3>
+                        <p>/ person</p>
+                       </div>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="total">
+                        <div class="price">
+                            <h3>Total</h3>
+                            <p>/ person</p>
+                        </div>
+                        
+                        <span>$0.00</span>
+                    </div>  
+                    <button class="reset-btn">RESET</button>
                 </div>
-            </div>
-    
-            <div class="result-container">
-                <div class="tip-amount">
-                    <h3>Tip Amount <br> / person </h3>
-                    <span>$0.00</span>
-                </div>
-                <div class="total">
-                    <h3>Total <br> / person </h3>
-                    <span>$0.00</span>
-                </div>  
-                <button>RESET</button>
             </div>
         </div>
     </main>
