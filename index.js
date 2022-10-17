@@ -1,6 +1,5 @@
 let bill = document.getElementById('bill-inp');
 let tipBtn = document.querySelectorAll('.tip');
-console.log(tipBtn[0].innerHTML);
 
 let billValue = 0.0 //default
 
@@ -13,3 +12,5 @@ function setBillValue(){
     }
     console.log(billValue)
 }
+
+console.log(tipBtn[0].innerHTML);
