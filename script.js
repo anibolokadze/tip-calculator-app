@@ -1,6 +1,7 @@
 let bill = document.getElementById('bill-inp');
 let tipBtn = document.querySelectorAll('.tip');
 let people = document.getElementById('people-inp');
+let custom = document.getElementById('custom');
 
 // bill
 let billValue = 0.0; //default
@@ -13,10 +14,11 @@ function setBillValue(){
     }
     console.log(billValue)
 }
-
-// tip btns
-console.log(tipBtn[0].innerHTML);
-
+// get tip value 
+function tipValue(element) {
+    var tipBtn = element.innerText;
+    console.log(tipBtn);
+}
 // number of people
 let peopleValue = 0; //default
 people.addEventListener('input', setPeopleValue);
@@ -24,10 +26,19 @@ function setPeopleValue(){
     peopleValue = parseFloat(people.value)
     console.log(peopleValue);
 }
-
+//custom tip
+let customValue = 0; //default
+custom.addEventListener('input', setCustomValue);
+function setCustomValue(){
+    customValue = parseFloat(custom.value)
+    console.log(customValue);
+}
 
 // let qty = document.querySelector("input[name='number']");
 // qty.addEventListener("change", function (event) {
 //     if (this.value < 1) this.value = 1; // minimum is 1
 //     else this.value = Math.floor(this.value); // only integers allowed
 // })
+
+
+

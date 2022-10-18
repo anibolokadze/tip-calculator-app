@@ -21,17 +21,15 @@
                         <input name="number" type="number" placeholder="0" id="bill-inp" min="1">
                     </div>
                 </div>
-               
-        
                 <div class="tips-container">
                     <h2>Select Tip %</h2>
                     <div class="tips-wrapper">
-                        <button class="btn tip" value="5">5%</button>
-                        <button class="btn tip" value="10">10%</button>
-                        <button class="btn tip" value="15">15%</button>
-                        <button class="btn tip" value="25">25%</button>
-                        <button class="btn tip" value="50">50%</button>
-                        <input type="number" class="btn-custom" placeholder="Custom" />
+                        <button class="btn tip" value="5" onclick="tipValue(this)">5%</button>
+                        <button class="btn tip" value="10" onclick="tipValue(this)">10%</button>
+                        <button class="btn tip" value="15" onclick="tipValue(this)">15%</button>
+                        <button class="btn tip" value="25" onclick="tipValue(this)">25%</button>
+                        <button class="btn tip" value="50" onclick="tipValue(this)">50%</button>
+                        <input type="number" class="btn-custom" id="custom" placeholder="Custom" min="1"/>
                     </div>
                 </div>
         
@@ -66,7 +64,7 @@
         </div>
     </main>
     
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
