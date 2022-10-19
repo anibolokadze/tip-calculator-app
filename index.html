@@ -24,12 +24,14 @@
                 <div class="tips-container">
                     <h2>Select Tip %</h2>
                     <div class="tips-wrapper">
-                        <button class="btn tip" value="5" onclick="tipValue(this)">5%</button>
-                        <button class="btn tip" value="10" onclick="tipValue(this)">10%</button>
-                        <button class="btn tip" value="15" onclick="tipValue(this)">15%</button>
-                        <button class="btn tip" value="25" onclick="tipValue(this)">25%</button>
-                        <button class="btn tip" value="50" onclick="tipValue(this)">50%</button>
-                        <input type="number" class="btn-custom" id="custom" placeholder="Custom" min="1"/>
+                        <button class="btn tip" value="5" onclick="calculate(this)">5%</button>
+                        <button class="btn tip" value="10" onclick="calculate(this)">10%</button>
+                        <button class="btn tip" value="15" onclick="calculate(this)">15%</button>
+                        <button class="btn tip" value="25" onclick="calculate(this)">25%</button>
+                        <button class="btn tip" value="50" onclick="calculate(this)">50%</button>
+                        <!-- <input onfocus="customCalculate(this)" type="number" class="btn-custom" id="custom" placeholder="Custom" min="1">
+                         -->
+                         <input  onchange="customCalculate(this)" id="custom" class="btn-custom" type="number" name="custom" placeholder="Custom" min="0">
                     </div>
                 </div>
         
@@ -48,7 +50,7 @@
                         <h3>Tip Amount</h3>
                         <p>/ person</p>
                        </div>
-                        <span>$0.00</span>
+                        <span id="tip-amount">$0.00</span>
                     </div>
                     <div class="total">
                         <div class="price">
@@ -56,7 +58,7 @@
                             <p>/ person</p>
                         </div>
                         
-                        <span>$0.00</span>
+                        <span id="total-tip">$0.00</span>
                     </div>  
                     <button class="reset-btn" >RESET</button>
                 </div>
