@@ -125,6 +125,9 @@ input:hover, button:hover{
 .reset-btn:hover{
     background: var(--light-grayish-cyan);
 }
+.active, .btn:hover {
+    background-color: var(--strong-cyan);
+}
 @media (min-width:75rem) {
     body{
         height: 100vh;

@@ -29,9 +29,7 @@
                         <button class="btn tip" value="15" onclick="calculate(this)">15%</button>
                         <button class="btn tip" value="25" onclick="calculate(this)">25%</button>
                         <button class="btn tip" value="50" onclick="calculate(this)">50%</button>
-                        <!-- <input onfocus="customCalculate(this)" type="number" class="btn-custom" id="custom" placeholder="Custom" min="1">
-                         -->
-                         <input  onchange="customCalculate(this)" id="custom" class="btn-custom" type="number" name="custom" placeholder="Custom" min="0">
+                        <input  onclick="customCalculate(this)" id="custom" class="btn-custom" type="number" name="custom" placeholder="Custom" min="0">
                     </div>
                 </div>
         
@@ -60,7 +58,7 @@
                         
                         <span id="total-tip">$0.00</span>
                     </div>  
-                    <button class="reset-btn" >RESET</button>
+                    <button class="reset-btn" onclick="resetAll()">RESET</button>
                 </div>
             </div>
         </div>
