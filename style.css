@@ -61,13 +61,13 @@ input{
 }
 /* bill and number of people input styles */
 .bill-input input{
-    background-image: url(/images/icon-dollar.svg);
+    background-image: url(images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: left 10px top 15px;
     text-align: right;
 }
 .people-input input{
-    background-image: url(/images/icon-person.svg);
+    background-image: url(images/icon-person.svg);
     background-repeat: no-repeat;
     background-position: left 10px top 15px;
     text-align: right;
