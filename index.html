@@ -18,7 +18,7 @@
                 <div class="bill-container">
                     <h2>Bill</h2>
                     <div class="bill-input">
-                        <input name="number" type="number" placeholder="0" id="bill-inp" min="1">
+                        <input name="number" type="number" placeholder="0" id="bill-inp" onkeypress="return event.charCode >= 48" min="0">
                     </div>
                 </div>
                 <div class="tips-container">
@@ -29,14 +29,16 @@
                         <button class="btn tip" value="15" onclick="calculate(this)">15%</button>
                         <button class="btn tip" value="25" onclick="calculate(this)">25%</button>
                         <button class="btn tip" value="50" onclick="calculate(this)">50%</button>
-                        <input  onclick="customCalculate(this)" id="custom" class="btn-custom" type="number" name="custom" placeholder="Custom" min="0">
+                        <input  onchange="customCalculate(this)" id="custom" class="btn-custom" type="number" name="custom" placeholder="Custom" min="0">
                     </div>
                 </div>
         
                 <div class="people">
                     <h2>Number of People</h2>
                     <div class="people-input">
-                        <input type="number" placeholder="0" id="people-inp" min="1"/>
+                        <div id="error"></div>
+                        <input type="number" id="people-inp" placeholder="0" onkeypress="return event.charCode = 48"  min="0">
+                         
                     </div>
                 </div>
             </div>

@@ -35,6 +35,9 @@ button, input{
     border: none;
     border-radius: 5px;
 }
+/* #error{
+    display: none;
+} */
 /* main section */
 .title{
     display: flex;
@@ -125,7 +128,7 @@ input:hover, button:hover{
 .reset-btn:hover{
     background: var(--light-grayish-cyan);
 }
-.active, .btn:hover {
+.tips-wrapper button:focus {
     background-color: var(--strong-cyan);
 }
 @media (min-width:75rem) {
