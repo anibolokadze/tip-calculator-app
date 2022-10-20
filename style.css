@@ -37,7 +37,7 @@ button, input{
 }
 #error-custom{
     display: flex;
-
+    margin-left: 55%;
 }
 /* main section */
 .title{
@@ -154,6 +154,10 @@ input:hover, button:hover{
     }
     .btn, .btn-custom{
         width: 31%;
+    }
+    #error-custom{
+        display: flex;
+        margin-left: 70%;
     }
     .reset-btn{
         margin-top: 75px;
