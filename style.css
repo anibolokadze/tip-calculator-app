@@ -35,9 +35,10 @@ button, input{
     border: none;
     border-radius: 5px;
 }
-/* #error{
-    display: none;
-} */
+#error-custom{
+    display: flex;
+
+}
 /* main section */
 .title{
     display: flex;

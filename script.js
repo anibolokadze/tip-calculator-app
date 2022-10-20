@@ -7,32 +7,83 @@ let reset = document.getElementsByClassName('.reset-btn');
 let tipAmount = document.getElementById('tip-amount'); 
 let totalTip = document.getElementById('total-tip');
 
-let errorBlock = document.getElementById('error');
-let errorBorder = document.getElementById('people-inp')
+let peopleErrorBlock = document.getElementById('error-people');
+let peopleErrorBorder = document.getElementById('people-inp');
+
+let billErrorBlock = document.getElementById('error-bill');
+let billErrorBorder = document.getElementById('bill-inp');
+
+let customErrorBlock = document.getElementById('error-custom');
+let customErrorBorder = document.getElementById('custom');
  //default
 bill.addEventListener('input', (e)=> {
     console.log(e.target.value);
+    billLessThenZero();
 });
 people.addEventListener('input', (e)=> {
     console.log(e.target.value);
-    lessThenZero();
+    peopleLessThenZero();
 });
+custom.addEventListener('input',(e)=>{
+    customLessThenZero();
+})
+
+
+function RestrictFirstZero(e) {
+    if (e.srcElement.value.length == 0 && e.which == 48) {
+        e.preventDefault();
+        return false;
+    }
+};
 
 
 
-const lessThenZero = () => {
+
+function peopleLessThenZero(){
     if (+people.value === 0) {
-        errorBlock.textContent = "Can't be zero";
-        errorBorder.style.border = "2px solid red";
-        errorBlock.style.color = "red";
+        peopleErrorBlock.textContent = "Can't be zero";
+        peopleErrorBorder.style.border = "2px solid red";
+        peopleErrorBlock.style.color = "red";
         totalTip.textContent = "$0.00";
         tipAmount.textContent = "$0.00";
         people.value = "";
     } else {
-        errorBlock.textContent = "";
-        errorBorder.style.border = "none";
+        peopleErrorBlock.textContent = "";
+        peopleErrorBorder.style.border = "none";
     }
-};
+}
+
+function billLessThenZero(){
+    if (+bill.value === 0) {
+        billErrorBlock.textContent = "Can't be zero";
+        billErrorBorder.style.border = "2px solid red";
+        billErrorBlock.style.color = "red";
+        totalTip.textContent = "$0.00";
+        tipAmount.textContent = "$0.00";
+        bill.value = "";
+    } else {
+        billErrorBlock.textContent = "";
+        billErrorBorder.style.border = "none";
+    }
+}
+
+function customLessThenZero(){
+    if (+custom.value === 0) {
+        customErrorBlock.textContent = "Can't be zero";
+        customErrorBorder.style.border = "2px solid red";
+        customErrorBlock.style.color = "red";
+        totalTip.textContent = "$0.00";
+        tipAmount.textContent = "$0.00";
+        bill.value = "";
+    } else {
+        customErrorBlock.textContent = "";
+        customErrorBorder.style.border = "none";
+    }
+}
+
+
+
+
 
 function calculate(percent){
     if(people.value>0 && bill.value>0){
@@ -41,7 +92,7 @@ function calculate(percent){
         const totalBill = Number(bill.value) + tip;
         tipAmount.innerHTML = ("$" + (tip / people.value).toFixed(2));
         totalTip.innerHTML = ("$" + (totalBill / people.value).toFixed(2));
-    }   
+    }
 }
 calculate();
 
@@ -63,5 +114,13 @@ function resetAll() {
     custom.value = 'Custom';
     tipAmount.textContent = "$0.00";
     totalTip.textContent = "$0.00";
+    
+    peopleErrorBlock.textContent = "";
+    peopleErrorBorder.style.border = "none";
+
+    billErrorBlock.textContent = "";
+    billErrorBorder.style.border = "none";
+
+
 }
 resetAll();
