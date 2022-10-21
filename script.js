@@ -12,7 +12,6 @@ let billErrorBorder = document.getElementById('bill-inp');
 let customErrorBorder = document.getElementById('custom');
 let customErrorBlock = document.getElementById('error-custom');
 
-
 bill.addEventListener('input', (e)=> {
     // console.log(e.target.value);
     billLessThenZero();
@@ -23,48 +22,50 @@ people.addEventListener('input', (e)=> {
 });
 custom.addEventListener('input',(e)=>{
     customLessThenZero();
-})
+});
+
+// tip reset
+let tipReset = () => {
+    totalTip.textContent = "$0.00";
+    tipAmount.textContent = "$0.00";
+};
 
 function peopleLessThenZero(){
     if (+people.value === 0) {
         peopleErrorBlock.textContent = "Can't be zero";
         peopleErrorBorder.style.border = "2px solid red";
         peopleErrorBlock.style.color = "red";
-        totalTip.textContent = "$0.00";
-        tipAmount.textContent = "$0.00";
+        tipReset();
         people.value = "";
     } else {
         peopleErrorBlock.textContent = "";
         peopleErrorBorder.style.border = "none";
     }
-}
+};
+
 function billLessThenZero(){
     if (+bill.value === 0) {
         billErrorBlock.textContent = "Can't be zero";
         billErrorBorder.style.border = "2px solid red";
         billErrorBlock.style.color = "red";
-        totalTip.textContent = "$0.00";
-        tipAmount.textContent = "$0.00";
-        bill.value = "";
+        tipReset();
     } else {
         billErrorBlock.textContent = "";
         billErrorBorder.style.border = "none";
     }
-}
+};
 
 function customLessThenZero(){
     if (+custom.value === 0) {
         customErrorBlock.textContent = "Can't be zero";
         customErrorBlock.style.color = 'red';
         customErrorBorder.style.border = "2px solid red";
-        totalTip.textContent = "$0.00";
-        tipAmount.textContent = "$0.00";
-        bill.value = "";
+        tipReset();
     } else {
         customErrorBlock.textContent = "";
         customErrorBorder.style.border = "none";
     }
-}
+};
 
 function calculate(percent){
     if(people.value>0 && bill.value>0){
@@ -74,7 +75,7 @@ function calculate(percent){
         tipAmount.innerHTML = ("$" + (tip / people.value).toFixed(2));
         totalTip.innerHTML = ("$" + (totalBill / people.value).toFixed(2));
     }
-}
+};
 calculate();
 
 function customCalculate(customPercent){
@@ -85,15 +86,14 @@ function customCalculate(customPercent){
         tipAmount.innerHTML = ("$" + (tip / people.value).toFixed(2));
         totalTip.innerHTML = ("$" + (totalBill / people.value).toFixed(2));
     }
-}
+};
 customCalculate();
 
 function resetAll() {
     bill.value = 0;
     people.value = 0;
     custom.value = 'Custom';
-    tipAmount.textContent = "$0.00";
-    totalTip.textContent = "$0.00";
+    tipReset();
     
     peopleErrorBlock.textContent = "";
     peopleErrorBorder.style.border = "none";
@@ -103,5 +103,5 @@ function resetAll() {
 
     customErrorBlock.textContent = "";
     customErrorBorder.style.border = "none";
-}
+};
 resetAll();
