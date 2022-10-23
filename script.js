@@ -13,11 +13,9 @@ let customErrorBorder = document.getElementById('custom');
 let customErrorBlock = document.getElementById('error-custom');
 
 bill.addEventListener('input', (e)=> {
-    // console.log(e.target.value);
     billLessThenZero();
 });
 people.addEventListener('input', (e)=> {
-    // console.log(e.target.value);
     peopleLessThenZero();
 });
 custom.addEventListener('input',(e)=>{
